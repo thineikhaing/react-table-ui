@@ -23,15 +23,14 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
 
-      - name: Generate new version
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Generate New Version
         run: npm version ${{ github.event.inputs.version }}
 
-      - name: Push new version tag to repository
-        run: git push origin main --tags
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Push Version Tag
+        run: git push origin --follow-tags
