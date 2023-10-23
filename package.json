@@ -1,7 +1,7 @@
 {
   "name": "react-table-ui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -38,7 +38,6 @@
     "vite-plugin-dts": "^3.6.0",
     "vitest": "^0.34.6"
   },
-
   "files": [
     "dist"
   ],
