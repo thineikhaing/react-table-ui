@@ -1,12 +1,11 @@
 // @/src/components/Table.tsx
-// @ts-nocheck
+
 import { styled } from "@stitches/react";
 import { useState } from "react";
-
 import { TableHeader } from "./TableHeader";
 import { TableRow } from "./TableRow";
 import get from "lodash.get";
-import { IColumnType } from "../types/IColumnType";
+import { IColumnType } from "types/IColumnType";
 
 interface Props<T> {
   data: T[];
@@ -27,16 +26,14 @@ const Thead = styled("thead", {
 
 
 export function Table<T>({ data, columns, multiSelect }: Props<T>): JSX.Element {
-
-  
     const initialSortColumn: IColumnType<T> ={key: 'id',title: 'Id'};
     const initialSortOrder: 'asc' | 'desc' = 'asc'/* Set your initial sortOrder value here */;
-
     const initialSelectedItems: Record<string, boolean> = data.reduce((acc, item) => {
-      acc[String(get(item, 'id'))] = false as boolean;
+      const itemId = String(get(item, 'id'));
+      acc[itemId] = false;
       return acc;
-    }, {});
-    
+    }, Object.create(null));
+
     const [sortColumn, setSortColumn] = useState<IColumnType<T>>(initialSortColumn);
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>(initialSortOrder);
     const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(initialSelectedItems);

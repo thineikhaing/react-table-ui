@@ -1,8 +1,7 @@
 // @/src/components/TableRowCell.tsx
 import { styled } from "@stitches/react";
 import get from "lodash.get";
-
-import { IColumnType } from "../../types/IColumnType";
+import { IColumnType } from "types/IColumnType";
 
 interface Props<T> {
   item: T;

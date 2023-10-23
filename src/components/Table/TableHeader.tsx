@@ -1,6 +1,6 @@
 // @/src/components/TableHeader.tsx
 import { styled } from "@stitches/react";
-import { IColumnType } from "../../types/IColumnType";
+import { IColumnType } from "types/IColumnType";
 
 interface Props<T> {
   columns: IColumnType<T>[];
