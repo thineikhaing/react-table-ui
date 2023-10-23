@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.container{
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3em;
+  padding-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px #0000000d, 0 0 5px #0000000d;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255,255,255,var(--bg-opacity));
+}
+.control_option{
+  text-align: center;
+}
