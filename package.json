@@ -1,7 +1,7 @@
 {
   "name": "react-table-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -37,5 +37,28 @@
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
     "vitest": "^0.34.6"
-  }
+  },
+
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/react-table-library.es.js",
+      "require": "./dist/react-table-library.umd.js"
+    }
+  },
+  "main": "./dist/react-table-library.umd.js",
+  "module": "./dist/react-table-library.es.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thineikhaing/react-table-ui"
+  },
+  "keywords": [],
+  "author": "thineikhaing",
+  "bugs": {
+    "url": "https://github.com/thineikhaing/react-table-ui/issues"
+  },
+  "homepage": "https://github.com/thineikhaing/react-table-ui#readme",
+  "license": "MIT"
 }
