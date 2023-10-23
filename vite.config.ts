@@ -11,7 +11,7 @@ export default defineConfig({
       entry: resolve('src', 'components/Table/Table.tsx'),
       name: 'ReactTableLibrary',
       formats: ['es', 'umd'],
-      fileName: (format) => `react-table-library.${format}.js`,
+      fileName: (format) => `te-react-table-library.${format}.js`,
     },
     copyPublicDir: false,
   },

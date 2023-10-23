@@ -43,12 +43,12 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/react-table-library.es.js",
-      "require": "./dist/react-table-library.umd.js"
+      "import": "./dist/te-react-table-library.es.js",
+      "require": "./dist/te-react-table-library.umd.js"
     }
   },
-  "main": "./dist/react-table-library.umd.js",
-  "module": "./dist/react-table-library.es.js",
+  "main": "./dist/te-react-table-library.umd.js",
+  "module": "./dist/te-react-table-library.es.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/thineikhaing/react-table-ui"
