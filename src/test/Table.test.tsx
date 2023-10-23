@@ -1,7 +1,7 @@
 // inside App.test.tsx
 // @ts-nocheck
 import { render, screen } from '@testing-library/react';
-import { Table } from "../../src/components/Table"
+import { Table } from "../../src/components/Table/Table"
 
 describe('Table component', () => {
    it('should render a table with a header and body', () => {
