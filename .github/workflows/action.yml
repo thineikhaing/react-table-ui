@@ -33,3 +33,5 @@ jobs:
 
       - name: Push new version tag to repository
         run: git push origin main --tags
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
