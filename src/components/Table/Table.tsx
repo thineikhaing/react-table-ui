@@ -28,8 +28,8 @@ const Thead = styled("thead", {
 
 export function Table<T>({ data, columns, multiSelect }: Props<T>): JSX.Element {
 
-  const [sortColumn, setSortColumn] = useState<IColumnType<T> | null>(null);
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc' | null>(null);
+  const [sortColumn, setSortColumn] = useState<IColumnType<T>>();
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>();
   const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(
     data.reduce((acc, item) => {
       acc[String(get(item, 'id'))] = false as boolean; 
